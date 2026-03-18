@@ -1,5 +1,6 @@
 package com.senai.biblioteca.dto;
 
+import com.senai.biblioteca.entity.Usuario;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +21,7 @@ public class EmprestimoDTO {
     @NotBlank
     private Date dataDevolucao;
 
-    public EmprestimoDTO(Date dataDevolucao, Date dataEmprestimo) {
+    public EmprestimoDTO(long id, Date dataDevolucao, Date dataEmprestimo, Usuario usuario) {
         this.dataDevolucao = dataDevolucao;
         this.dataEmprestimo = dataEmprestimo;
     }

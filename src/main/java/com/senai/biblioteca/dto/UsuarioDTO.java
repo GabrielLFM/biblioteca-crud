@@ -1,5 +1,6 @@
 package com.senai.biblioteca.dto;
 
+import com.senai.biblioteca.entity.CarteiraBiblioteca;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,8 +19,9 @@ public class UsuarioDTO {
     @NotBlank
     private String email;
 
-    public UsuarioDTO(String email, String nome) {
+    public UsuarioDTO(String email, String nome, long numeroCredencial, CarteiraBiblioteca carteira) {
         this.email = email;
         this.nome = nome;
     }
+
 }
