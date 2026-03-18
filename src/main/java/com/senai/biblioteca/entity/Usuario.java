@@ -23,8 +23,8 @@ public class Usuario {
     private String nome;
     private String email;
 
-    @OneToOne(mappedBy = "credencial", cascade = CascadeType.ALL)
-    private CarteiraBiblioteca credencial;
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private CarteiraBiblioteca carteira;
 
     @OneToMany(mappedBy = "usuario")
     private List<Emprestimo> emprestimos = new ArrayList<>();

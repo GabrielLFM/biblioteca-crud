@@ -1,5 +1,6 @@
 package com.senai.biblioteca.entity;
 
+import com.senai.biblioteca.dto.CarteiraDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,11 +19,13 @@ public class CarteiraBiblioteca {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long numeroCredencial;
-    private Date dataEMissao;
+    private Date dataEmissao;
     private boolean isValid;
 
     @OneToOne
     @MapsId
     private Usuario usuario;
 
+    public CarteiraBiblioteca(CarteiraDTO carDto) {
+    }
 }
